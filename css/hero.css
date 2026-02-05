@@ -1,0 +1,192 @@
+﻿.hero {
+  padding: 84px 0 72px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Obsah musí být nad glow */
+.hero__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: 28px;
+  align-items: center;
+}
+
+h1 {
+  margin: 16px 0 10px;
+  font-size: 54px;
+  line-height: 1.06;
+  letter-spacing: -.9px;
+}
+
+.lead {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  max-width: 64ch;
+}
+
+.heroActions {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.heroActions .hint {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.statRow {
+  margin-top: 22px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.stat {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 14px 16px;
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  min-width: 280px;
+}
+
+.stat__num {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: rgba(209, 0, 18, .12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.stat__txt b {
+  display: block;
+  font-size: 16px;
+}
+
+.stat__txt span {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+
+.hero__visual{
+  border-radius: var(--r);
+  border: 1px solid var(--line);
+  background: #111;
+  min-height: clamp(260px, 40vh, 420px);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+
+/* pozadí glow (pod obsahem) */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:-35%;
+  z-index: 0;
+  pointer-events:none;
+
+  background: radial-gradient(
+    900px 600px at 15% 35%,
+    rgba(209,0,18,.5),
+    rgba(209,0,18,.32) 35%,
+    transparent 70%
+  );
+
+  filter: blur(38px);
+  opacity: 1;
+
+  transform: translate3d(-8%, 0%, 0);
+  animation: glowPass1 8s linear infinite;
+  will-change: transform;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:-35%;
+  z-index: 0;
+  pointer-events:none;
+
+  background: radial-gradient(
+    850px 550px at 85% 55%,
+    rgba(255,105,180,.22),
+    rgba(255,105,180,.08) 40%,
+    transparent 72%
+  );
+
+  filter: blur(30px);
+  opacity: .95;
+
+  transform: translate3d(8%, 0%, 0);
+  animation: glowPass2 9.5s linear infinite;
+  will-change: transform;
+}
+
+/* obsah nad pozadím */
+.hero__grid{
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes glowPass1{
+  0%   { transform: translate3d(-28%, -8%, 0) scale(.92); opacity: 0; }
+  10%  { opacity: 1; }
+  60%  { opacity: .95; }
+  100% { transform: translate3d(28%, 10%, 0) scale(1.10); opacity: 0; }
+}
+
+@keyframes glowPass2{
+  0%   { transform: translate3d(30%, 10%, 0) scale(.95); opacity: 0; }
+  15%  { opacity: .9; }
+  70%  { opacity: .85; }
+  100% { transform: translate3d(-30%, -10%, 0) scale(1.12); opacity: 0; }
+}
+
+
+.hero__img{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 780px;
+  display: block;
+  object-fit: cover;
+  transform: scale(1.02);
+}
+
+
+@media (prefers-reduced-motion: reduce){
+  .hero{ animation: none; }
+  .hero::before,
+  .hero::after{ animation:none; }
+}
+
+
+
+
+
+
+
+
+

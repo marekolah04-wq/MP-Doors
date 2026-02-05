@@ -1,0 +1,36 @@
+﻿.partnersGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.partnerCard {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: var(--r);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.partnerLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px;
+  border-radius: var(--r);
+  background: #fff;
+  min-height: 92px;
+  margin-bottom: 14px;
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+
+.partnerLogo:hover {
+  transform: translateY(-1px);
+}
+
+.partnerLogo img {
+  max-height: 46px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}

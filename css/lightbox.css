@@ -1,0 +1,36 @@
+.lightbox {
+  border: none;
+  padding: 0;
+  border-radius: 18px;
+  max-width: min(500px, 80vw); 
+  background: transparent;
+}
+
+.lightbox::backdrop {
+  background: rgba(0,0,0,.65);
+}
+
+.lightbox__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  background: #111;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255,255,255,.15);
+  font-size: 26px;
+  cursor: pointer;
+}
+.lightbox__close:hover {
+  background: rgba(255,255,255,.3);
+  transition: background .3s ease;
+}
