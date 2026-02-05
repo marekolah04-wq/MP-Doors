@@ -86,3 +86,13 @@ textarea {
   width: 16px;
   height: 16px;
 }
+
+
+.formMsg{
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+.formMsg.isOk{ color: #1a7f37; }
+.formMsg.isErr{ color: #b42318; }
+
