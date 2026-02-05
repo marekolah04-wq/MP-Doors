@@ -3,6 +3,9 @@ const form = document.querySelector('form[name="kontakt"]');
 if (form) {
   const msgEl = form.querySelector(".formMsg");
 
+  const encode = (data) =>
+    new URLSearchParams(data).toString();
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -13,14 +16,17 @@ if (form) {
 
     const formData = new FormData(form);
 
+    // FormData -> plain object (stabilnější encoding)
+    const data = Object.fromEntries(formData.entries());
+
     try {
       const res = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        body: encode(data),
       });
 
-      if (!res.ok) throw new Error("Network response not ok");
+      if (!res.ok) throw new Error("Bad response");
 
       if (msgEl) {
         msgEl.textContent = "Díky, zpráva je odeslaná. Ozveme se co nejdřív.";
