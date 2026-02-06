@@ -7,6 +7,10 @@
   border-bottom: 1px solid var(--line);
 }
 
+.nav .container {
+  position: relative;
+}
+
 .nav__inner {
   display: flex;
   align-items: center;
@@ -87,7 +91,18 @@
 }
 
 .drawer {
-  display: none;
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: calc(72px + 10px); /* nav__inner height + gap */
+  z-index: 60;
+
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255,255,255,.98);
+  box-shadow: var(--shadow);
+
   opacity: 0;
   transform: translateY(-8px);
   pointer-events: none;
@@ -102,9 +117,10 @@
 
 
 
+
 .drawer a {
   display: block;
-  padding: 12px 10px;
+  padding: 12px 12px;
   border-radius: 14px;
   color: var(--muted);
 }
