@@ -21,7 +21,7 @@
   display: block;
 }
 .brand__logoImg:hover{
-  transform: scale(1.05);
+  transform: scale(1.02);
   transition: transform 0.25s ease;
 }
 
@@ -88,13 +88,19 @@
 
 .drawer {
   display: none;
-  border-top: 1px solid var(--line);
-  padding: 10px 0 14px;
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease;
 }
 
 .drawer.open {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
+
+
 
 .drawer a {
   display: block;

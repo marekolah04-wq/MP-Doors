@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MP DOORS, onepage struktura (draft)</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/nav.css" />
   <link rel="stylesheet" href="css/hero.css" />
@@ -14,6 +19,7 @@
   <link rel="stylesheet" href="css/realisation.css" />
   <link rel="stylesheet" href="css/process.css" />
   <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="css/lightbox.css" />
 </head>
@@ -168,27 +174,27 @@
 
         <div class="photoGrid">
           <figure class="photo reveal">
-            <img class="photo__img" src="assets/img/1.jpeg" alt="Realizace 1" data-lightbox>
+            <img loading="lazy" class="photo__img" src="assets/img/7.jpeg" alt="Realizace 1" data-lightbox>
           </figure>
 
           <figure class="photo reveal">
-            <img class="photo__img" src="assets/img/2.jpeg" alt="Realizace 2" data-lightbox>
+            <img loading="lazy" class="photo__img" src="assets/img/2.jpeg" alt="Realizace 2" data-lightbox>
           </figure>
 
           <figure class="photo reveal">
-            <img class="photo__img" src="assets/img/3.jpeg" alt="Realizace 3"  data-lightbox>
+            <img loading="lazy" class="photo__img" src="assets/img/3.jpeg" alt="Realizace 3"  data-lightbox>
           </figure>
 
           <figure class="photo reveal">
-            <img class="photo__img" src="assets/img/4.jpeg" alt="Realizace 4" data-lightbox>
+            <img loading="lazy" class="photo__img" src="assets/img/4.jpeg" alt="Realizace 4" data-lightbox>
           </figure>
 
           <figure class="photo reveal">
-            <img class="photo__img" src="assets/img/5.jpeg" alt="Realizace 5" data-lightbox>
+            <img loading="lazy" class="photo__img" src="assets/img/5.jpeg" alt="Realizace 5" data-lightbox>
           </figure>
 
           <figure class="photo reveal">
-            <img class="photo__img" src="assets/img/6.jpeg" alt="Realizace 6" data-lightbox>
+            <img loading="lazy" class="photo__img" src="assets/img/6.jpeg" alt="Realizace 6" data-lightbox>
           </figure>
         </div>
       </div>
@@ -216,11 +222,11 @@
           
 
           <div class="partnerCard reveal">
-            <a class="partnerLogo" href="https://www.pol-skone.cz" target="_blank" rel="noopener"
+            <a class="partnerLogo margin" href="https://www.pol-skone.cz" target="_blank" rel="noopener"
               aria-label="POL-SKONE">
               <img src="assets/icons/logo-pol-skone.svg" alt="POL-SKONE logo" />
             </a>
-            <h3>POL-SKONE</h3>
+            <h3 class="pol-skone">POL-SKONE</h3>
             <p>Dveře a zárubně pro interiéry. Spolupráce, kde dává smysl spolehlivá montáž.</p>
           </div>
 
@@ -351,22 +357,36 @@
           </div>
         </div>
 
-        <footer class="reveal">
-          <div class="footerGrid">
-            <div>© <span id="year"></span> MP DOORS</div>
-            <div class="footerLinks">
-              <a href="#sluzby">Služby</a>
-              <a href="#kontakt">Kontakt</a>
-              <a href="javascript:void(0)">Ochrana osobních údajů</a>
-            </div>
-            <div class="credit">
-              <a href="https://marek-codes.cz" target="_blank" rel="noopener">Vytvořil Marek Oláh</a>
-            </div>
-          </div>
-        </footer>
+        
       </div>
     </section>
   </main>
+
+
+  <footer class="reveal">
+    <div class="container">
+  <div class="footerTop">
+    <div class="footerBrand">
+      <div class="footerName">MP DOORS</div>
+      <div class="footerNote">Montáže dveří, zárubní a skrytých systémů</div>
+    </div>
+
+    <div class="footerLinks">
+      <a href="#sluzby">Služby</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="javascript:void(0)">Ochrana osobních údajů</a>
+    </div>
+
+    <div class="credit">
+      <a href="https://marek-codes.cz" target="_blank" rel="noopener">Vytvořil Marek Oláh</a>
+    </div>
+  </div>
+
+  <div class="footerBottom">
+    <div>© <span id="year"></span> MP DOORS</div>
+  </div>
+  </div>
+</footer>
 
 
 
@@ -375,6 +395,9 @@
   <img class="lightbox__img" alt="">
   </dialog>
 
+
+
+  <button class="toTop" id="toTop" aria-label="Zpět nahoru">↑</button>
 
   <script src="js/main.js" defer></script>
   <script src="js/reveal.js" defer></script>
