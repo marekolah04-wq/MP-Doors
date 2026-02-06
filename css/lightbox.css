@@ -38,3 +38,56 @@
   background: rgba(255,255,255,.3);
   transition: background .3s ease;
 }
+
+.lightbox__nav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255,255,255,.15);
+  color: black;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .15s ease, background .15s ease, opacity .15s ease;
+  z-index: 2;
+}
+
+.lightbox__nav:hover{
+  background: rgba(255,255,255,.3);
+  transform: translateY(-50%) scale(1.04);
+}
+
+.lightbox__nav:active{
+  transform: translateY(-50%) scale(.98);
+}
+
+.lightbox__nav:focus{
+  outline: none;
+}
+
+.lightbox__nav:focus-visible{
+  outline: 2px solid rgba(255,255,255,.7);
+  outline-offset: 2px;
+}
+
+.lightbox__nav--prev{ left: 14px; }
+.lightbox__nav--next{ right: 14px; }
+
+/* když je jen 1 fotka nebo nemáme prev/next */
+.lightbox__nav.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* mobil: ať to není u okraje */
+@media (max-width: 720px){
+  .lightbox__nav--prev{ left: 10px; }
+  .lightbox__nav--next{ right: 10px; }
+}
