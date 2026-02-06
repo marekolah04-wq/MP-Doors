@@ -80,10 +80,18 @@
 .lightbox__nav--prev{ left: 14px; }
 .lightbox__nav--next{ right: 14px; }
 
-/* když je jen 1 fotka nebo nemáme prev/next */
+
 .lightbox__nav.is-hidden{
   opacity: 0;
   pointer-events: none;
+}
+
+.lightbox__nav,
+.lightbox__close{
+  color: var(--text);
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* mobil: ať to není u okraje */

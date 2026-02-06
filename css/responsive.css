@@ -107,6 +107,10 @@
 
 /* ========== scroll to top button ========= */
 .toTop {
+  display: none;
+  color: var(--text);
+  -webkit-appearance: none;
+  appearance: none;
   position: fixed;
   right: 16px;
   bottom: 30px;
@@ -126,4 +130,8 @@
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+@media (max-width: 760px){
+  .toTop { display: inline; }
 }
