@@ -27,7 +27,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeDrawer();
 });
 
-// zavřít klikem mimo (optional, ale UX top)
+// zavřít klikem mimo 
 document.addEventListener("click", (e) => {
   if (!drawer || !burger) return;
   const clickedInsideDrawer = drawer.contains(e.target);
@@ -49,7 +49,7 @@ if (year) {
 const toTop = document.getElementById("toTop");
 window.addEventListener("scroll", () => {
   if (!toTop) return;
-  toTop.classList.toggle("is-visible", window.scrollY > 700);
+  toTop.classList.toggle("is-visible", window.scrollY > 900);
 });
 toTop?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 

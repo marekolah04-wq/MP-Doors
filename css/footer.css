@@ -38,14 +38,14 @@ footer {
   color: var(--muted);
   padding: 8px 10px;
   border-radius: 999px;
-  border: 1px solid transparent;
+  border: 1px solid var(--line);
   transition: background .15s ease, color .15s ease, border-color .15s ease, transform .15s ease;
 }
 
 .footerLinks a:hover {
   color: var(--text);
   background: var(--soft);
-  border-color: var(--line);
+  border-color: var(--muted);
   transform: translateY(-1px);
 }
 

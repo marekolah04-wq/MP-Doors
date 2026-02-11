@@ -4,6 +4,7 @@
   .servicesGrid {
     grid-template-columns: repeat(3, 1fr);
   }
+
 }
 
 /* ========== 980px ==========
@@ -13,12 +14,17 @@
     font-size: 44px;
   }
 
+
   .servicesGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .partnersGrid {
     grid-template-columns: 1fr;
+  }
+
+      .stat {
+    width: 100%;
   }
 }
 
@@ -55,6 +61,21 @@
   .hero__visual {
     min-height: 280px;
   }
+
+    .hero__copy{ max-width: 100%; }
+
+  .hero-title{ max-width: 100%; }
+  .hero-title .claim{
+    font-size: 36px;
+    line-height: 1.12;
+    max-width: 22ch;
+  }
+
+  .lead{
+    font-size: 16px;
+    max-width: 100%;
+  }
+
 
   /* 3-column grid (services atd) */
   .grid {

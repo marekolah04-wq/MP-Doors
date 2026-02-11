@@ -5,8 +5,6 @@
   overflow: hidden;
 }
 
-
-/* Obsah musí být nad glow */
 .hero__grid {
   position: relative;
   z-index: 1;
@@ -22,36 +20,34 @@ h1 {
   line-height: 1.06;
   letter-spacing: -.9px;
 }
+.hero-title span {
+  display: block;
+}
+.hero-title .claim {
+  max-width: 36ch;
+}
+.hero-title {
+  max-width: 22ch;
+}
 
 .lead {
   margin: 0;
   color: var(--muted);
   font-size: 18px;
-  max-width: 64ch;
-}
-
-.heroActions {
-  margin-top: 18px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.heroActions .hint {
-  color: var(--muted);
-  font-size: 14px;
+  max-width: 36ch;
 }
 
 .statRow {
   margin-top: 22px;
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   flex-wrap: wrap;
   align-items: stretch;
 }
 
 .stat {
+  flex: 1 1 280px;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--r);
@@ -61,6 +57,13 @@ h1 {
   gap: 14px;
   align-items: center;
   min-width: 280px;
+  max-width: 38ch;
+}
+.stat:nth-child(2) .stat__num{
+  font-size: 16.5px;
+}
+.stat:nth-child(3) .stat__num{
+  background: rgba(209,0,18,.08);
 }
 
 .stat__num {
@@ -99,7 +102,6 @@ h1 {
 }
 
 
-/* pozadí glow (pod obsahem) */
 .hero::before{
   content:"";
   position:absolute;
@@ -144,7 +146,6 @@ h1 {
   will-change: transform;
 }
 
-/* obsah nad pozadím */
 .hero__grid{
   position: relative;
   z-index: 1;

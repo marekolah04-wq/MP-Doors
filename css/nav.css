@@ -94,7 +94,7 @@
   position: absolute;
   left: 18px;
   right: 18px;
-  top: calc(72px + 10px); /* nav__inner height + gap */
+  top: calc(72px + 10px); 
   z-index: 60;
 
   padding: 10px;
