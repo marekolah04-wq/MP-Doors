@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ochrana osobních údajů | MP DOORS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <style>
+    .legal {
+      padding: 60px 0;
+    }
+    .legal h1 {
+      font-size: 40px;
+      margin: 0 0 12px;
+      letter-spacing: -.6px;
+    }
+    .legal p, .legal li {
+      color: var(--muted);
+      max-width: 80ch;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .legal h2 {
+      margin-top: 26px;
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: var(--text);
+    }
+    .legal ul {
+      padding-left: 18px;
+    }
+    .backLink {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      color: var(--muted);
+    }
+    .backLink:hover { color: var(--text); }
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a class="brand" href="/" aria-label="MP DOORS domů">
+          <img class="brand__logoImg" src="assets/icons/logo.png" alt="MP DOORS logo" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal">
+      <div class="container">
+        <h1>Ochrana osobních údajů</h1>
+        <p>Tento dokument popisuje, jakým způsobem zpracováváme osobní údaje, které nám poskytnete prostřednictvím kontaktního formuláře na webu MP DOORS.</p>
+
+        <h2>1. Správce osobních údajů</h2>
+        <p>Správcem osobních údajů je <b>MP DOORS</b>.<br>
+          Kontakt: <b>info@mpdoors.cz</b>, tel. <b>+420 734 778 898</b><br>
+        28126 <b>Labské Chrčice 141</b> <br>
+        IČO: <b>22203036</b> <br>
+        DIČ: <b>CZ22203036</b>
+        </p>
+
+        <h2>2. Jaké osobní údaje zpracováváme</h2>
+        <ul>
+          <li>Jméno a firma</li>
+          <li>E-mail</li>
+          <li>Telefon (nepovinné)</li>
+          <li>Zpráva (obsah poptávky)</li>
+        </ul>
+
+        <h2>3. Účel zpracování</h2>
+        <p>Osobní údaje zpracováváme výhradně za účelem vyřízení Vaší zprávy, poptávky nebo dotazu a následné komunikace.</p>
+
+        <h2>4. Právní základ zpracování</h2>
+        <p>Osobní údaje zpracováváme na základě Vašeho <b>souhlasu</b>, který udělujete zaškrtnutím checkboxu ve formuláři. Souhlas můžete kdykoliv odvolat e-mailem na <b>info@mpdoors.cz</b>.</p>
+
+        <h2>5. Doba uchování</h2>
+        <p>Údaje uchováváme po dobu nezbytně nutnou k vyřízení komunikace, nejdéle však <b>12 měsíců</b> od poslední komunikace, pokud se nedohodneme na spolupráci.</p>
+
+        <h2>6. Kdo má k údajům přístup</h2>
+        <p>Údaje z formuláře jsou technicky zpracovávány službou <b>Netlify</b>, která zajišťuje odesílání formulářů z webu. K údajům mají přístup pouze osoby potřebné k vyřízení Vaší zprávy.</p>
+
+        <h2>7. Vaše práva</h2>
+        <p>Máte právo požadovat přístup k údajům, opravu, výmaz, omezení zpracování, vznést námitku a podat stížnost u Úřadu pro ochranu osobních údajů. Pro uplatnění práv nás kontaktujte na <b>info@mpdoors.cz</b>.</p>
+
+        <a class="backLink" href="/">← Zpět na web</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footerBottom">
+        <div>© <span id="year"></span> MP DOORS</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const year = document.getElementById("year");
+    if (year) year.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
