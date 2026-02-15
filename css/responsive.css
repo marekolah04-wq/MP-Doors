@@ -62,8 +62,9 @@
   }
 
   .hero__visual {
-    min-height: 280px;
+    height: 550px;
   }
+
 
     .hero__copy{ max-width: 100%; }
 
