@@ -174,7 +174,8 @@ h1 {
   height: 780px;
   display: block;
   object-fit: cover;
-  transform: scale(1.02);
+  transform: rotate(0.45deg) scale(1.02);
+  transform-origin: center;
 }
 
 
