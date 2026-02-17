@@ -17,4 +17,4 @@ A clean one-page B2B presentation website for MP DOORS focused on door installat
 - CSS (split into multiple files)
 - Vanilla JavaScript
 
-- Live on: https://mp-doors.netlify.app/
+- Live on: https://mpdoors.cz/
