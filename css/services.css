@@ -8,15 +8,22 @@
   display: grid;
   justify-items: center;
   gap: 10px;
+  text-align: center;
 }
 
 .btn--cta{
+  width: 100%;
+  max-width: 420px;
   padding: 14px 20px;
   font-size: 16px;
   font-weight: 800;
   letter-spacing: .1px;
   box-shadow: 0 16px 44px rgba(209, 0, 18, .22);
   transform: translateZ(0);
+
+  white-space: normal;
+  text-align: center;
+  line-height: 1.35;
 }
 
 .btn--cta:hover{
@@ -34,4 +41,14 @@
   color: var(--muted);
   font-size: 14px;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .btn--cta {
+    font-size: 9px;
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 16px;
+    font-size: 15px;
+  }
 }
